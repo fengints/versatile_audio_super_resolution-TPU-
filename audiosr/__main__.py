@@ -99,16 +99,22 @@ random_seed = args.seed
 sample_rate=48000
 latent_t_per_second=12.8
 guidance_scale = args.guidance_scale
+device = args.device
+if (device == "tpu"):
+    import torch
+    import torch_xla.core.xla_model as xm
+    device = xm.xla_device()
+    #add notification, to set variables
 
 os.makedirs(save_path, exist_ok=True)
-audiosr = build_model(model_name=args.model_name, device=args.device)
+audiosr = build_model(model_name=args.model_name, device=device)
 
 if(args.input_file_list):
     print("Generate audio based on the text prompts in %s" % args.input_file_list)
     files_todo = read_list(args.input_file_list)
-else: 
+else:
     files_todo = [input_file]
-    
+
 for input_file in files_todo:
     name = os.path.splitext(os.path.basename(input_file))[0] + args.suffix
 

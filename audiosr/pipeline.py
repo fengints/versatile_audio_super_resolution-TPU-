@@ -140,7 +140,18 @@ def build_model(ckpt_path=None, config=None, device=None, model_name="basic"):
 
     resume_from_checkpoint = ckpt_path
 
-    checkpoint = torch.load(resume_from_checkpoint, map_location=device)
+    #TPU try this if won't work
+    #if (device.contains("xla")):
+    #    import torch_xla.utils.serialization as xser
+    #    state_dict = xser.load(ckpt_path)
+    #    latent_diffusion.load_state_dict(state_dict)
+    #else:
+    #    resume_from_checkpoint = ckpt_path
+    #    checkpoint = torch.load(resume_from_checkpoint, map_location=device)
+    #    latent_diffusion.load_state_dict(checkpoint["state_dict"], strict=False)
+
+    checkpoint = torch.load(resume_from_checkpoint)
+    #checkpoint = torch.load(resume_from_checkpoint, map_location=device)
 
     latent_diffusion.load_state_dict(checkpoint["state_dict"], strict=False)
 

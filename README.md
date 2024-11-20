@@ -3,7 +3,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2309.07314-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2309.07314)  [![githubio](https://img.shields.io/badge/GitHub.io-Audio_Samples-blue?logo=Github&style=flat-square)](https://audioldm.github.io/audiosr) [![Replicate](https://replicate.com/nateraw/audio-super-resolution/badge)](https://replicate.com/nateraw/audio-super-resolution)
 
-Pass your audio in, AudioSR will make it high fidelity! 
+Pass your audio in, AudioSR will make it high fidelity!
 
 Work on all types of audio (e.g., music, speech, dog, raining, ...) & all sampling rates.
 
@@ -12,14 +12,14 @@ Share your thoughts/samples/issues in our discord channel: https://discord.gg/HW
 ![Image Description](https://github.com/haoheliu/versatile_audio_super_resolution/blob/main/visualization.png?raw=true)
 
 ## Change Log
-- 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).  
+- 2023-09-24: Add replicate demo (@nateraw); Fix error on windows, librosa warning etc (@ORI-Muchim).
 - 2023-09-16: Fix DC shift issue. Fix duration padding bug. Update default DDIM steps to 50.
 
 ## Gradio Demo
 
 To run the Gradio demo locally:
 
-1. Install dependencies: `pip install -r requirements.txt` 
+1. Install dependencies: `pip install -r requirements.txt`
 2. Run the app: `python app.py`
 3. Open the URL displayed to view the demo
 
@@ -81,7 +81,7 @@ optional arguments:
 - [ ] Optimize the inference speed.
 
 ## Cite our work
-If you find this repo useful, please consider citing: 
+If you find this repo useful, please consider citing:
 ```bibtex
 @article{liu2023audiosr,
   title={{AudioSR}: Versatile Audio Super-resolution at Scale},

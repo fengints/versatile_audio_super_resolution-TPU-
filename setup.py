@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 # python3 setup.py sdist bdist_wheel
 """
-@File    :   setup.py.py    
+@File    :   setup.py.py
 @Contact :   haoheliu@gmail.com
 @License :   (C)Copyright 2020-2100
 
@@ -51,7 +51,8 @@ REQUIRED = [
     "unidecode",
     "phonemizer",
     "torchlibrosa>=0.0.9",
-    "transformers==4.30.2",
+    #"transformers==4.30.2",
+    "transformers",
     "huggingface_hub",
     "progressbar",
     "ftfy",
@@ -158,5 +159,5 @@ setup(
     cmdclass={
         "upload": UploadCommand,
     },
-    scripts=["bin/audiosr.cmd", "bin/audiosr"],
+    scripts=["bin/audiosr.cmd", "audiosr/__main__.py"],
 )

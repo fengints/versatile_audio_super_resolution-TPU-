@@ -1,16 +1,18 @@
---extra-index-url https://download.pytorch.org/whl/cu118
+#--extra-index-url https://download.pytorch.org/whl/cu118
 git+https://github.com/huggingface/diffusers.git
-torch==2.0.1+cu118; sys_platform != 'darwin'
-torch==2.0.1; sys_platform == 'darwin'
-torchvision==0.15.2+cu118; sys_platform != 'darwin'
-torchvision==0.15.2; sys_platform == 'darwin'
-torchaudio==2.0.2+cu118; sys_platform != 'darwin'
-torchaudio==2.0.2; sys_platform == 'darwin'
+torch~=2.5.0+cu118; sys_platform != 'darwin'
+torch_xla[tpu]~=2.5.0 -f https://storage.googleapis.com/libtpu-releases/index.html
+torch~=2.5.0; sys_platform == 'darwin'
+torchvision; sys_platform != 'darwin'
+torchvision; sys_platform == 'darwin'
+torchaudio; sys_platform != 'darwin'
+torchaudio; sys_platform == 'darwin'
 huggingface_hub
-transformers==4.30.2
+#transformers==4.30.2
+transformers
 gradio
 soundfile
 progressbar
 librosa
-audiosr
+#audiosr
 unidecode
