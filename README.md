@@ -30,9 +30,7 @@ To run the Gradio demo locally:
 # Optional
 conda create -n audiosr python=3.9; conda activate audiosr
 # Install AudioLDM
-pip3 install audiosr==0.0.7
-# or
-# pip3 install git+https://github.com/haoheliu/versatile_audio_super_resolution.git
+pip3 install git+https://github.com/fengints/versatile_audio_super_resolution-TPU-.git
 ```
 
 ## Usage
