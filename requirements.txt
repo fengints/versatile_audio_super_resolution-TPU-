@@ -1,7 +1,7 @@
 #--extra-index-url https://download.pytorch.org/whl/cu118
 git+https://github.com/huggingface/diffusers.git
 torch~=2.5.0+cu118; sys_platform != 'darwin'
-torch_xla[tpu]~=2.5.0 -f https://storage.googleapis.com/libtpu-releases/index.html
+torch_xla[tpu]~=2.5.0+libtpu -f https://storage.googleapis.com/libtpu-releases/index.html
 torch~=2.5.0; sys_platform == 'darwin'
 torchvision; sys_platform != 'darwin'
 torchvision; sys_platform == 'darwin'
