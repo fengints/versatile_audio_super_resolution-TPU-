@@ -149,7 +149,7 @@ def build_model(ckpt_path=None, config=None, device=None, model_name="basic"):
     #    resume_from_checkpoint = ckpt_path
     #    checkpoint = torch.load(resume_from_checkpoint, map_location=device)
     #    latent_diffusion.load_state_dict(checkpoint["state_dict"], strict=False)
-    if (device.contains("xla")):
+    if ("xla" in device):
         checkpoint = torch.load(resume_from_checkpoint, map_location='cpu')
     else:
         checkpoint = torch.load(resume_from_checkpoint, map_location=device)
